@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Login</title>
+    <!-- This <style> block is the "paint and furniture" for our page. -->
+    <!-- It makes it look nice and centered. -->
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        div {
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.75rem;
+            box-sizing: border-box; /* Makes padding not affect width */
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- This is the "stuff" in the room. -->
+    <div class="container">
+        <h2>Insurance Portal Login</h2>
+        
+        <!-- 
+          This is the most important part!
+          The <form> tag wraps our login boxes.
+          'action="patient_status.html"' is a magic instruction that says:
+          "When the 'Log In' button inside this form is clicked,
+          send the user to the 'patient_status.html' file."
+        -->
+        <form action="patient_status.html">
+            <div>
+                <label for="username">Username</label>
+                <!-- 
+                  id="username" is a "name tag".
+                  Our robot (Selenium) will look for this exact name tag.
+                -->
+                <input type="text" id="username" name="username" placeholder="Enter username">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <!-- id="password" is the second "name tag". -->
+                <input type="password" id="password" name="password" placeholder="Enter password">
+            </div>
+            
+            <!-- 
+              This button is a "submit" button, which means
+              it automatically triggers the 'action' on the <form>.
+              We give it a name tag too!
+            -->
+            <button type="submit" id="login-button">Log In</button>
+        </form>
+    </div>
+</body>
+</html>
